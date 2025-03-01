@@ -1,9 +1,9 @@
 @echo off
 setlocal enabledelayedexpansion
 set year=25
-set month=02
+set month=03
 
-for /L %%d in (1,1,28) do (
+for /L %%d in (1,1,31) do (
     if %%d LSS 10 (
         set day=0%%d
     ) else (
@@ -25,5 +25,5 @@ for /L %%d in (1,1,28) do (
     echo ^</html^>
     ) > !day!!month!!year!.html
 )
-echo 28 archivos HTML creados con el contenido correcto.
+echo 31 archivos HTML creados con el contenido correcto.
 pause
