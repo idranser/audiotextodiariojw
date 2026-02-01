@@ -1,11 +1,12 @@
 @echo off
 setlocal enabledelayedexpansion
-set year=25
+REM Cambiar el año:
+set year=26
 REM Cambiar el mes:
-set month=10
+set month=02
 
 REM Cambiar de 30 a 31 o viceversa segun la cantidad de dias del mes:
-for /L %%d in (1,1,31) do (
+for /L %%d in (1,1,28) do (
     if %%d LSS 10 (
         set day=0%%d
     ) else (
@@ -28,5 +29,5 @@ for /L %%d in (1,1,31) do (
     ) > !day!!month!!year!.html
 )
 REM Cambiar de 30 a 31 o viceversa para reflejar los días del mes:
-echo 31 archivos HTML creados con el contenido correcto.
+echo 28 archivos HTML creados con el contenido correcto.
 pause
